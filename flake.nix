@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { nixpkgs }: {
     nixosConfigurations.sams-shadow = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
