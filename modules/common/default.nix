@@ -17,6 +17,7 @@
     eza
     bat
     nixd
+    lazygit
   ];
 
   # Common programs
