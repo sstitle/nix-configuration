@@ -8,17 +8,20 @@
   # Common packages
   environment.systemPackages = with pkgs; [
     git
-    kitty
-    ghostty
     gh
-    google-chrome
-    code-cursor
-    zed-editor
     atuin
     eza
     bat
-    nixd
     lazygit
+
+    nixd
+
+    ghostty
+    code-cursor
+    zed-editor
+
+    google-chrome
+    spotify
   ];
 
   # Common programs
