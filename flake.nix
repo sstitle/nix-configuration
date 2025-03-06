@@ -9,6 +9,7 @@
     nixosConfigurations.sams-shadow = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ./modules/common
         ./hosts/sams-shadow/configuration.nix
       ];
     };
