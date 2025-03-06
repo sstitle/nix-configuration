@@ -15,6 +15,7 @@
     lazygit
 
     nixd
+    nixfmt-rfc-style
 
     ghostty
     code-cursor
