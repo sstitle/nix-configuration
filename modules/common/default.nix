@@ -9,6 +9,7 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
+    ghostty
     gh
     google-chrome
     code-cursor
