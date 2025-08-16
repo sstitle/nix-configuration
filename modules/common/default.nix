@@ -86,5 +86,5 @@
   programs.nh = {
     enable = true;
     flake = "/home/samtitle/PersonalRepos/nix-configuration";
-  }
+  };
 }
