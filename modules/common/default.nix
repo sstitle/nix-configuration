@@ -15,6 +15,8 @@
     lazygit
     lazydocker
 
+    neovim
+    nh
     nixd
     nixfmt-rfc-style
 
@@ -80,4 +82,9 @@
   programs.nix-ld = {
     enable = true;
   };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/samtitle/PersonalRepos/nix-configuration";
+  }
 }
