@@ -15,6 +15,7 @@
     lazygit
     lazydocker
     zoxide
+    devenv
 
     neovim
     nh
