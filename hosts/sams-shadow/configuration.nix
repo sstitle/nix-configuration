@@ -51,7 +51,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-
+  nix.settings.trusted-users = [ "root" "samtitle" ];
 
   # List services that you want to enable:
 
