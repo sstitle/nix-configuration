@@ -3,7 +3,13 @@
 {
   # Common system configurations
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  # This setting is necessary for Nickel-lang organist
+  nix.settings.allow-import-from-derivation = true;
 
   # Common packages
   environment.systemPackages = with pkgs; [
@@ -84,7 +90,6 @@
   services.atuin = {
     enable = true;
   };
-
 
   programs.nix-ld = {
     enable = true;
