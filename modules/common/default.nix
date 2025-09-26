@@ -12,7 +12,7 @@
   nix.settings.allow-import-from-derivation = true;
 
   # Add ccache directory to sandbox paths
-  nix.settings.extra-sandbox-paths = [ "/var/cache/ccache" ];
+  nix.settings.extra-sandbox-paths = [ "${config.programs.ccache.cacheDir}" ];
 
   # Add ccache overlay
   nixpkgs.overlays = [
@@ -20,7 +20,7 @@
       ccacheWrapper = super.ccacheWrapper.override {
         extraConfig = ''
           export CCACHE_COMPRESS=1
-          export CCACHE_DIR="/var/cache/ccache"
+          export CCACHE_DIR="${config.programs.ccache.cacheDir}"
           export CCACHE_UMASK=007
           export CCACHE_SLOPPINESS=random_seed
           if [ ! -d "$CCACHE_DIR" ]; then
@@ -66,8 +66,10 @@
 
     google-chrome
     spotify
+    
 
     claude-code
+    ccache
   ];
 
   programs.steam = {
@@ -139,6 +141,6 @@
   # Enable ccache for faster compilation
   programs.ccache = {
     enable = true;
-    cacheDir = "/var/cache/ccache";
+    cacheDir = "${config.programs.ccache.cacheDir}";
   };
 }
