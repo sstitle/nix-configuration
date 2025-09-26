@@ -65,6 +65,7 @@
     syntaxHighlighting.enable = true;
     shellInit = ''
       eval "$(atuin init zsh)"
+      export CCACHE_DIR=/home/samtitle/.ccache
     '';
   };
   users.defaultUserShell = pkgs.zsh;

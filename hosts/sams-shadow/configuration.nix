@@ -53,6 +53,9 @@
 
   nix.settings.trusted-users = [ "root" "samtitle" ];
 
+  # Configure ccache for faster builds
+  nix.settings.extra-sandbox-paths = [ "/home/samtitle/.ccache" ];
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
