@@ -12,7 +12,7 @@
   nix.settings.allow-import-from-derivation = true;
 
   # Add ccache directory to sandbox paths
-  nix.settings.extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
+  nix.settings.extra-sandbox-paths = [ "/var/cache/ccache" ];
 
   # Add ccache overlay
   nixpkgs.overlays = [
